@@ -1,5 +1,5 @@
 # RemindMe Bot
-A telegram bot where users can set reminders using a timer.
+A telegram bot where users can set reminders using a timer.\
 [@remindMe_2020_bot](t.me/remindMe_2020_bot)
 
 ## Getting Started
@@ -14,8 +14,8 @@ $ pip install python-telegram-bot --upgrade
 ```
 
 ## Usage
-Use /put to add new reminder
-Use /set to set countdown to reminder
+Use */put* to add new reminder\
+Use */set* to set countdown to reminder
 
 
 ## Credit

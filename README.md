@@ -38,7 +38,7 @@ python main.py
 
 ## Built With
 
-* [Python 3.8](https://www.python.org/downloads/) - The language used
+* [Python 3.8](https://www.python.org/downloads/) 
 * [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
 
 ## Authors

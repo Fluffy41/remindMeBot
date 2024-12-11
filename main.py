@@ -1,6 +1,6 @@
 import telegram
 import logging
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Application, CommandHandler, MessageHandler, filters
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -96,16 +96,14 @@ def call_back_time(context: telegram.ext.CallbackContext):
 
 
 def main():
-    updater = Updater(token="1185647707:AAEt_96YZYd3-FRbEbDeLDaFKtEqtczmVA4", use_context=True)
-    # job = updater.job_queue
-    dispatcher = updater.dispatcher
+    # Create the application
+    application = Application.builder().token("1185647707:AAEt_96YZYd3-FRbEbDeLDaFKtEqtczmVA4").build()
+
     # Add Handlers
-    dispatcher.add_handler(start_handler)
-    # dispatcher.add_handler(echo_handler)
-    dispatcher.add_handler(put_handler)
-    dispatcher.add_handler(set_handler)
-    updater.start_polling()
-    updater.idle()
+    application.add_handler(CommandHandler("start", start))
+
+    # Start the bot
+    application.run_polling()
 
 
 if __name__ == '__main__':
